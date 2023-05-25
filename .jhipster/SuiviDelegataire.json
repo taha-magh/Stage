@@ -1,0 +1,49 @@
+{
+  "applications": "*",
+  "changelogDate": "20230419154506",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "suivi_delegataire",
+  "fields": [
+    {
+      "fieldName": "typeIndicateur",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nom",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dateValeur",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "valeurContractuel",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "valeurConstate",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "SuiviDelegataire",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "delegataire",
+      "otherEntityRelationshipName": "suiviDelegataire",
+      "relationshipName": "delegataire",
+      "otherEntityField": "id"
+    }
+  ],
+  "service": "no",
+  "clientRootFolder": ""
+}

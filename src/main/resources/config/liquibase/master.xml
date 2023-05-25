@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+
+    <property name="now" value="now()" dbms="h2"/>
+    <property name="now" value="GETDATE()" dbms="mssql"/>
+
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle, mssql, mariadb"/>
+    <property name="clobType" value="clob" dbms="h2"/>
+    <property name="clobType" value="clob" dbms="mysql, oracle, mssql, mariadb, postgresql"/>
+    <property name="uuidType" value="uuid" dbms="h2, mssql"/>
+
+    <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230324100713_added_entity_PersonneMoral.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230324100813_added_entity_PersonneAdversaire.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230324100913_added_entity_PersonnePhysique.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230324101013_added_entity_DemandePiecesJointes.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230324101113_added_entity_Demande.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230410094320_added_entity_Avocat.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230411141307_added_entity_Notaire.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230412104222_added_entity_Huissier.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230412114623_added_entity_Expertjudiciare.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230419154503_added_entity_Delegataire.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230419154504_added_entity_Sdl.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230419154505_added_entity_SuiviSdl.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230419154506_added_entity_SuiviDelegataire.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230419154507_added_entity_PieceJointeStatut.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230419154508_added_entity_PieceJointemodelJ.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230419154509_added_entity_PieceJointeSecteurAct.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230419154510_added_entity_StructureDelegataire.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230419154511_added_entity_StructureSdl.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230419154512_added_entity_TypeIndicDelegataire.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230419154513_added_entity_TypeIndicSdl.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230419161602_added_entity_Delegatair.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230426135339_added_entity_TypeIndicSdlDTO.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230426143501_added_entity_SuiviSdlServiceee.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20230324100813_added_entity_constraints_PersonneAdversaire.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230324101013_added_entity_constraints_DemandePiecesJointes.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230324101113_added_entity_constraints_Demande.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230419154503_added_entity_constraints_Delegataire.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230419154504_added_entity_constraints_Sdl.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230419154505_added_entity_constraints_SuiviSdl.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230419154506_added_entity_constraints_SuiviDelegataire.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230419154512_added_entity_constraints_TypeIndicDelegataire.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230419154513_added_entity_constraints_TypeIndicSdl.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
+    <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
+</databaseChangeLog>

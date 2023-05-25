@@ -1,0 +1,32 @@
+{
+  "applications": "*",
+  "changelogDate": "20230324100813",
+  "clientRootFolder": "",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "personne_adversaire",
+  "fields": [],
+  "fluentMethods": false,
+  "jpaMetamodelFiltering": true,
+  "name": "PersonneAdversaire",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "id",
+      "otherEntityName": "personnePhysique",
+      "otherEntityRelationshipName": "personneAdversaire",
+      "relationshipName": "personnePhysique",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "id",
+      "otherEntityName": "personneMoral",
+      "otherEntityRelationshipName": "personneAdversaire",
+      "relationshipName": "personnePhysique",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl",
+  "skipClient": true
+}

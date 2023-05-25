@@ -1,0 +1,102 @@
+{
+  "applications": "*",
+  "changelogDate": "20230419154503",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "delegataire",
+  "fields": [
+    {
+      "fieldName": "raisonSocial",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "raisonCom",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idFiscale",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ice",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "numCnss",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "adresse",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tel",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fax",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "gerant",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "structure",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "capital",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Delegataire",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "pieceJointeSecteurAct",
+      "otherEntityRelationshipName": "delegataire",
+      "relationshipName": "pieceJointeDelegataire",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "pieceJointeStatut",
+      "otherEntityRelationshipName": "delegataire",
+      "relationshipName": "pieceJointeDelegataire",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "pieceJointemodelJ",
+      "otherEntityRelationshipName": "delegataire",
+      "relationshipName": "pieceJointeDelegataire",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "suiviDelegataire",
+      "otherEntityRelationshipName": "delegataire",
+      "relationshipName": "suiviDelegataire"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "typeIndicDelegataire",
+      "otherEntityRelationshipName": "delegataire",
+      "relationshipName": "typeIndicataireDelegataire"
+    }
+  ],
+  "service": "no",
+  "clientRootFolder": ""
+}

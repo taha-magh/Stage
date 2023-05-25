@@ -1,0 +1,102 @@
+{
+  "applications": "*",
+  "changelogDate": "20230419154504",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "sdl",
+  "fields": [
+    {
+      "fieldName": "raisonSocial",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "raisonCom",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idFiscale",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ice",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "numCnss",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "adresse",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tel",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fax",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "gerant",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "structure",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "capital",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Sdl",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "pieceJointeSecteurAct",
+      "otherEntityRelationshipName": "sdl",
+      "relationshipName": "pieceJointeSdl",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "pieceJointeStatut",
+      "otherEntityRelationshipName": "sdl",
+      "relationshipName": "pieceJointeSdl",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "pieceJointemodelJ",
+      "otherEntityRelationshipName": "sdl",
+      "relationshipName": "pieceJointeSdl",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "suiviSdl",
+      "otherEntityRelationshipName": "sdl",
+      "relationshipName": "suiviSdl"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "typeIndicSdl",
+      "otherEntityRelationshipName": "sdl",
+      "relationshipName": "typeIndicataireSdl"
+    }
+  ],
+  "service": "no",
+  "clientRootFolder": ""
+}

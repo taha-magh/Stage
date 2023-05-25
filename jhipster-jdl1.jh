@@ -1,0 +1,107 @@
+entity Delegataire {
+	raisonSocial String
+    raisonCom String
+    idFiscale String
+    ice String
+    numCnss String
+    adresse String
+    tel String
+    fax String
+    email String
+    gerant String
+    structure String
+    capital String
+}
+entity Sdl{
+	raisonSocial String
+    raisonCom String
+    idFiscale String
+    ice String
+    numCnss String
+    adresse String
+    tel String
+    fax String
+    email String
+    gerant String
+    structure String
+    capital String
+}
+
+entity SuiviSdl {
+	typeIndicateur String
+    nom String
+    description String
+    dateValeur String
+    valeurContractuel String
+    valeurConstate String
+}
+entity SuiviDelegataire {
+	typeIndicateur String
+    nom String
+    description String
+    dateValeur String
+    valeurContractuel String
+    valeurConstate String
+}
+entity PieceJointeStatut {
+	file AnyBlob required
+    fileContentType String required
+    fileName String maxlength(400) required
+}
+entity PieceJointemodelJ {
+	file AnyBlob required
+    fileContentType String required
+    fileName String maxlength(400) required
+}
+entity PieceJointeSecteurAct {
+	file AnyBlob required
+    fileContentType String required
+    fileName String maxlength(400) required 
+}
+relationship OneToOne {
+Delegataire {pieceJointeDelegataire} to PieceJointeSecteurAct
+}
+relationship OneToOne {
+Delegataire {pieceJointeDelegataire} to PieceJointeStatut
+}
+relationship OneToOne {
+Delegataire {pieceJointeDelegataire} to PieceJointemodelJ
+}
+
+relationship OneToOne {
+Sdl {pieceJointeSdl} to PieceJointeSecteurAct
+}
+relationship OneToOne {
+Sdl {pieceJointeSdl} to PieceJointeStatut
+}
+relationship OneToOne {
+Sdl {pieceJointeSdl} to PieceJointemodelJ
+}
+entity StructureDelegataire {
+	libelle String
+	description String
+}
+entity StructureSdl {
+	libelle String
+	description String
+}
+entity TypeIndicDelegataire {
+	libelle String
+	description String
+}
+entity TypeIndicSdl {
+	libelle String
+	description String
+}
+relationship OneToMany {
+Sdl {SuiviSdl} to SuiviSdl
+}
+relationship OneToMany {
+Delegataire {SuiviDelegataire} to SuiviDelegataire
+}
+relationship OneToMany {
+Sdl {TypeIndicataireSdl} to TypeIndicSdl
+}
+relationship OneToMany {
+Delegataire {TypeIndicataireDelegataire} to TypeIndicDelegataire
+}

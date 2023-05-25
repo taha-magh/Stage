@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <!--
+        Added the constraints for entity Sdl.
+    -->
+    <changeSet id="20230419154504-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="piece_jointe_sdl_id"
+                                 baseTableName="sdl"
+                                 constraintName="fk_sdl_piece_jointe_sdl_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="piece_jointe_secteur_act"/>
+
+        <addForeignKeyConstraint baseColumnNames="piece_jointe_sdl_id"
+                                 baseTableName="sdl"
+                                 constraintName="fk_sdl_piece_jointe_sdl_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="piece_jointe_statut"/>
+
+        <addForeignKeyConstraint baseColumnNames="piece_jointe_sdl_id"
+                                 baseTableName="sdl"
+                                 constraintName="fk_sdl_piece_jointe_sdl_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="piece_jointemodel_j"/>
+
+    </changeSet>
+</databaseChangeLog>

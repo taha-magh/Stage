@@ -1,0 +1,25 @@
+{
+  "applications": "*",
+  "changelogDate": "20230419154511",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "structure_sdl",
+  "fields": [
+    {
+      "fieldName": "libelle",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "StructureSdl",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "no",
+  "clientRootFolder": ""
+}

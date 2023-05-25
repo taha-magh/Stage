@@ -1,0 +1,33 @@
+{
+  "applications": "*",
+  "changelogDate": "20230419154512",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "type_indic_delegataire",
+  "fields": [
+    {
+      "fieldName": "libelle",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "TypeIndicDelegataire",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "delegataire",
+      "otherEntityRelationshipName": "typeIndicataireDelegataire",
+      "relationshipName": "delegataire",
+      "otherEntityField": "id"
+    }
+  ],
+  "service": "no",
+  "clientRootFolder": ""
+}

@@ -1,0 +1,33 @@
+{
+  "applications": "*",
+  "changelogDate": "20230419154513",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "type_indic_sdl",
+  "fields": [
+    {
+      "fieldName": "libelle",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "TypeIndicSdl",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "sdl",
+      "otherEntityRelationshipName": "typeIndicataireSdl",
+      "relationshipName": "sdl",
+      "otherEntityField": "id"
+    }
+  ],
+  "service": "no",
+  "clientRootFolder": ""
+}

@@ -1,0 +1,49 @@
+{
+  "applications": "*",
+  "changelogDate": "20230419154505",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "suivi_sdl",
+  "fields": [
+    {
+      "fieldName": "typeIndicateur",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nom",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dateValeur",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "valeurContractuel",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "valeurConstate",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "SuiviSdl",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "sdl",
+      "otherEntityRelationshipName": "suiviSdl",
+      "relationshipName": "sdl",
+      "otherEntityField": "id"
+    }
+  ],
+  "service": "no",
+  "clientRootFolder": ""
+}
