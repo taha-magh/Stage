@@ -24,7 +24,6 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/api")
 @Transactional
-@CrossOrigin(origins = "http://localhost:4200/")
 public class DelegataireResource {
 
     private final Logger log = LoggerFactory.getLogger(DelegataireResource.class);
@@ -47,6 +46,7 @@ public class DelegataireResource {
      * @return the {@link ResponseEntity} with status {@code 201 (Created)} and with body the new delegataire, or with status {@code 400 (Bad Request)} if the delegataire has already an ID.
      * @throws URISyntaxException if the Location URI syntax is incorrect.
      */
+    @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping("/delegataires")
     public ResponseEntity<Delegataire> createDelegataire(@RequestBody Delegataire delegataire) throws URISyntaxException {
         log.debug("REST request to save Delegataire : {}", delegataire);
@@ -68,6 +68,7 @@ public class DelegataireResource {
      * or with status {@code 500 (Internal Server Error)} if the delegataire couldn't be updated.
      * @throws URISyntaxException if the Location URI syntax is incorrect.
      */
+    @CrossOrigin(origins = "http://localhost:4200")
     @PutMapping("/delegataires")
     public ResponseEntity<Delegataire> updateDelegataire(@RequestBody Delegataire delegataire) throws URISyntaxException {
         log.debug("REST request to update Delegataire : {}", delegataire);
@@ -85,7 +86,7 @@ public class DelegataireResource {
      *
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and the list of delegataires in body.
      */
-
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/delegataires")
     public List<Delegataire> getAllDelegataires() {
         log.debug("REST request to get all Delegataires");
@@ -98,6 +99,7 @@ public class DelegataireResource {
      * @param id the id of the delegataire to retrieve.
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the delegataire, or with status {@code 404 (Not Found)}.
      */
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/delegataires/{id}")
     public ResponseEntity<Delegataire> getDelegataire(@PathVariable Long id) {
         log.debug("REST request to get Delegataire : {}", id);
@@ -111,6 +113,7 @@ public class DelegataireResource {
      * @param id the id of the delegataire to delete.
      * @return the {@link ResponseEntity} with status {@code 204 (NO_CONTENT)}.
      */
+    @CrossOrigin(origins = "http://localhost:4200")
     @DeleteMapping("/delegataires/{id}")
     public ResponseEntity<Void> deleteDelegataire(@PathVariable Long id) {
         log.debug("REST request to delete Delegataire : {}", id);

@@ -38,9 +38,9 @@ spring:
       indent-output: true
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:sqlserver://10.0.1.192:1433;database=Marrakech
-    username: abdo
-    password: 12345
+    url: jdbc:sqlserver://192.168.56.1:1433;database=MarrakechTest
+    username: projet
+    password: 1234
     hikari:
       poolName: Hikari
       auto-commit: false
@@ -67,7 +67,7 @@ spring:
     cache: false
 
 server:
-  port: 8082
+  port: 8080
 
 # ===================================================================
 # JHipster specific properties

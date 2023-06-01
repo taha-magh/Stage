@@ -18,7 +18,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class SwaggerConfig {
 
     @Bean
-    public Docket apisForAutoEcole() {
+    public Docket apisForMarrakechBackApp() {
         String groupName = "marrakech";
         return new Docket(DocumentationType.SWAGGER_2)
             .select()
