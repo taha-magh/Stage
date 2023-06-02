@@ -54,6 +54,10 @@ public class Delegataire implements Serializable {
     @Column(name = "structure")
     private String structure;
 
+//    @ManyToOne
+//    @JoinColumn(unique = true)
+//    private StructureDelegataire structure;
+
     @Column(name = "capital")
     private String capital;
 

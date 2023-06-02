@@ -38,9 +38,12 @@ spring:
       indent-output: true
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:sqlserver://192.168.56.1:1433;database=MarrakechTest
-    username: projet
-    password: 1234
+    #   url: jdbc:sqlserver://192.168.56.1:1433;database=MarrakechTest
+    url: jdbc:sqlserver://10.0.1.192:1433;database=Marrakech
+    #username: projet
+    username: abdo
+    #password: 1234
+    password: 12345
     hikari:
       poolName: Hikari
       auto-commit: false
